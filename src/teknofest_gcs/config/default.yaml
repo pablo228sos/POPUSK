@@ -1,0 +1,66 @@
+app:
+  title: "Teknofest GCS"
+  team_id: 1
+  simulation: true
+
+map:
+  tile_url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+  attribution: "&copy; OpenStreetMap contributors"
+  cache_path: ".cache/qtwebengine"
+  center_lat: 39.925533
+  center_lon: 32.866287
+  zoom: 13
+  competition_boundary_points: []
+
+connection:
+  transport: "simulation"
+  serial_port: "COM3"
+  baud_rate: 57600
+  udp_endpoint: "udp:127.0.0.1:14550"
+  heartbeat_timeout_sec: 3.0
+
+teknofest_api:
+  enabled: false
+  base_url: "http://127.0.0.1:5000"
+  username: ""
+  password: ""
+  session_file: ".runtime/teknofest_session.json"
+  time_sync_period_sec: 10
+  telemetry_period_sec: 1
+
+video:
+  source: ""
+  output_dir: ".runtime/video"
+
+ai:
+  enabled: false
+  annotate_frames: true
+  onboard_companion: "Raspberry Pi + Hailo"
+  follow_distance_m: 2.0
+
+logging:
+  output_dir: ".runtime/logs"
+  telemetry_csv: "telemetry.csv"
+  events_jsonl: "events.jsonl"
+
+safety:
+  defense_action: "RTL"
+  auto_reroute: true
+  mission_zone_required: true
+  fence_action: "RTL"
+  fence_margin_m: 50.0
+  manual_mode_limit: 3
+  minimum_autonomous_ratio: 0.75
+
+aircraft:
+  autopilot: "ArduPlane"
+  controller_board: "Matek H743-Wing"
+  aircraft_name: "VTOL Talister"
+  vehicle_class: "quadplane"
+  vtol_type: "tailsitter"
+  cruise_altitude_m: 120.0
+  mission_takeoff_alt_m: 35.0
+  mission_landing_alt_m: 0.0
+  cruise_speed_mps: 24.0
+  qguided_mode_enabled: true
+  qrtl_mode: 1

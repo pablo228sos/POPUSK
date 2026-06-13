@@ -1,0 +1,103 @@
+Metadata-Version: 2.4
+Name: teknofest-gcs
+Version: 0.1.0
+Summary: Open-source Ground Control Station for Teknofest combat UAV workflows.
+Author: Codex
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: PyQt6<6.11,>=6.10
+Requires-Dist: PyQt6-WebEngine<6.11,>=6.10
+Requires-Dist: aiohttp>=3.11
+Requires-Dist: numpy>=1.26
+Requires-Dist: opencv-python>=4.10
+Requires-Dist: pymavlink>=2.4
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: shapely>=2.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+
+# Teknofest GCS
+
+Open-source Ground Control Station for the Teknofest combat UAV workflow. The project is built with Python, PyQt6, Qt WebEngine, MAVLink, OpenStreetMap/Leaflet, OpenCV, and an async Teknofest API client.
+
+## What is implemented
+
+- PyQt6 desktop shell with map, telemetry, control, video, settings, and log panels.
+- Qt WebEngine map panel with Leaflet, live UAV marker, track, route overlay, and zone rendering.
+- MAVLink transport layer with support for 3DR serial telemetry (`COM` + baud) and UDP endpoints.
+- Simulation mode for development when no aircraft or SITL is connected.
+- Teknofest API client for login, server time sync, telemetry upload, HSS zone fetch, lock info, kamikaze info, and QR target fetch.
+- Strict mission FSM: `INIT -> CONNECTED -> ARMED -> MISSION -> FAILSAFE/RTL`.
+- Zone monitoring and A* route re-planning around no-fly and defense zones.
+- OpenCV-based video pipeline with optional lightweight AI annotation, recording, and screenshots.
+- CSV/JSONL logging for telemetry and events.
+
+## Project layout
+
+- `src/teknofest_gcs/main.py`: app entrypoint.
+- `src/teknofest_gcs/runtime.py`: orchestration layer.
+- `src/teknofest_gcs/api/client.py`: Teknofest API integration and payload validation.
+- `src/teknofest_gcs/comm/mavlink.py`: MAVLink / 3DR connection worker.
+- `src/teknofest_gcs/geo/*`: zones, route validation, A* avoidance.
+- `src/teknofest_gcs/ui/*`: PyQt6 UI and Leaflet map.
+- `tests/*`: regression tests for FSM, zone logic, and telemetry payload rules.
+
+## Run
+
+1. Create a virtual environment with Python 3.10+.
+2. Install dependencies:
+
+```bash
+pip install -e .
+```
+
+3. Start the application:
+
+```bash
+teknofest-gcs
+```
+
+On first launch the app creates `settings.yaml` in the repo root. Edit that file to switch between:
+
+- `simulation`
+- `serial` for 3DR telemetry radios
+- `udp` for SITL / network MAVLink
+
+## 3DR configuration
+
+Set in `settings.yaml`:
+
+```yaml
+connection:
+  transport: "serial"
+  serial_port: "COM3"
+  baud_rate: 57600
+```
+
+## Teknofest API notes
+
+- The client uses server time only after `/api/sunucusaati` sync.
+- Telemetry upload is rate-limited to 1 Hz.
+- Session cookies are persisted in `.runtime/teknofest_session.json`.
+- HSS zones returned by `/api/hss_koordinatlari` are merged into the live map as defense circles.
+
+Important:
+
+- The exact field naming in `src/teknofest_gcs/api/client.py` currently follows the commonly used Teknofest combat UAV schema with lowercase keys such as `iha_enlem`, `gps_saati`, and `hss_koordinat_bilgileri`.
+- Because the current official 2026 communication PDF was not directly bundled in this repo, verify the payload names and response bodies against the latest official Teknofest communication document before competition use.
+
+## Validation
+
+Run the included tests:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+## Production hardening still recommended
+
+- Replace public OSM tile URL with a local tile server for strict offline competition mode.
+- Add mission upload/download support and parameter management for the target autopilot.
+- Validate payload schemas against the latest official Teknofest document and sample server.
+- Add replay tooling and SITL automation scenarios.

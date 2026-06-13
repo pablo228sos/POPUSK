@@ -1,0 +1,2 @@
+[console_scripts]
+teknofest-gcs = teknofest_gcs.main:main

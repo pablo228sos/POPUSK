@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "teknofest-gcs"
+version = "0.1.0"
+description = "Open-source Ground Control Station for Teknofest combat UAV workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Codex" }
+]
+dependencies = [
+  "PyQt6>=6.10,<6.11",
+  "PyQt6-WebEngine>=6.10,<6.11",
+  "aiohttp>=3.11",
+  "numpy>=1.26",
+  "opencv-python>=4.10",
+  "pymavlink>=2.4",
+  "PyYAML>=6.0",
+  "shapely>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+teknofest-gcs = "teknofest_gcs.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+teknofest_gcs = [
+  "config/*.yaml",
+  "ui/assets/map/*",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

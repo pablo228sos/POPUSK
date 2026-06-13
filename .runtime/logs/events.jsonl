@@ -1,0 +1,570 @@
+{"timestamp": "2026-04-22T10:03:41.707068+00:00", "event_type": "runtime", "message": "FSM INIT -> CONNECTED (LINK_ESTABLISHED)", "context": {}}
+{"timestamp": "2026-04-22T10:03:41.717315+00:00", "event_type": "runtime", "message": "Simulation telemetry started", "context": {}}
+{"timestamp": "2026-04-22T10:03:49.215977+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:49.419788+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:49.644033+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:49.840706+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:50.054320+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:50.243123+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:50.448569+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:50.655082+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:50.855292+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:51.069874+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:51.271117+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:51.473141+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:51.675975+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:51.879244+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:52.072199+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:52.292175+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:52.493883+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:52.714077+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:52.899311+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:53.123916+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:53.307588+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:53.512488+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:53.731330+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:53.969945+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:54.160937+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:54.340293+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:54.553524+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:54.749756+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:54.956477+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:55.166421+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:55.368418+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:55.593903+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:55.782438+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:55.983866+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:56.190904+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:56.393936+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:56.597674+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:56.795244+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:56.998576+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:57.206560+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:57.408687+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:57.616181+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:57.817431+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:58.012452+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:58.211989+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:58.424869+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:03:58.625243+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:19.868985+00:00", "event_type": "runtime", "message": "FSM CONNECTED -> ARMED (ARM)", "context": {}}
+{"timestamp": "2026-04-22T10:04:25.873233+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:26.073899+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:26.274935+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:26.478352+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:26.683226+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:26.885674+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:27.097835+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:27.293416+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:27.495778+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:27.710899+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:27.903573+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:28.117715+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:28.319542+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:28.519394+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:28.717804+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:28.917140+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:29.123228+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:29.328482+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:29.527845+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:29.732900+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:29.932052+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:30.134905+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:30.348177+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:30.568312+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:30.779939+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:30.986204+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:31.178172+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:31.384123+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:31.577915+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:31.791246+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:31.998295+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:32.186425+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:32.387331+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:32.600592+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:32.795619+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:32.999586+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:33.200371+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:33.398947+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:33.609405+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:33.811260+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:34.021728+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:34.217049+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:34.423148+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:34.637216+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:34.837591+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:35.031842+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:35.245186+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:04:40.430276+00:00", "event_type": "runtime", "message": "AI enabled", "context": {}}
+{"timestamp": "2026-04-22T10:04:41.272861+00:00", "event_type": "runtime", "message": "AI disabled", "context": {}}
+{"timestamp": "2026-04-22T10:04:42.071275+00:00", "event_type": "runtime", "message": "AI enabled", "context": {}}
+{"timestamp": "2026-04-22T10:04:42.822631+00:00", "event_type": "runtime", "message": "AI disabled", "context": {}}
+{"timestamp": "2026-04-22T10:04:52.807849+00:00", "event_type": "runtime", "message": "AI enabled", "context": {}}
+{"timestamp": "2026-04-22T10:05:02.278569+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:02.488515+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:02.681916+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:02.886985+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:03.099711+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:03.299641+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:03.494114+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:03.699835+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:03.916296+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:04.127961+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:04.323347+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:04.538219+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:04.728948+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:04.937732+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:05.141398+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:05.338283+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:05.542286+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:05.750350+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:05.946188+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:06.156649+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:06.367104+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:06.563223+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:06.762838+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:06.997541+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:07.203092+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:07.375997+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:07.573436+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:07.801925+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:08.010415+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:08.217361+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:08.426862+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:08.606052+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:08.810500+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:09.019398+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:09.219759+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:09.435725+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:09.646844+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:09.848022+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:10.050515+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:10.247921+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:10.452271+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:10.651668+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:10.871268+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:11.062036+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:11.265908+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:11.468015+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:11.671163+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:23.593490+00:00", "event_type": "runtime", "message": "FSM ARMED -> RTL (TRIGGER_RTL)", "context": {}}
+{"timestamp": "2026-04-22T10:05:23.594476+00:00", "event_type": "runtime", "message": "RTL triggered: manual", "context": {}}
+{"timestamp": "2026-04-22T10:05:38.990816+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:39.181951+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:39.400641+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:39.607392+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:39.807550+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:40.010606+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:40.218927+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:40.421168+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:40.619758+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:40.834992+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:41.037823+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:41.239527+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:41.440894+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:41.638302+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:41.844644+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:42.048101+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:42.244833+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:42.451455+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:42.669978+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:42.872140+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:43.089122+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:43.306671+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:43.509467+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:43.728325+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:43.931641+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:44.127281+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:44.335863+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:44.525242+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:44.737559+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:44.942199+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:45.135724+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:45.339258+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:45.542536+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:45.753141+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:45.967891+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:46.168036+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:46.369693+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:46.579045+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:46.783327+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:46.991376+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:47.194836+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:47.387669+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:47.599318+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:47.800881+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:47.993944+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:48.205070+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:05:48.405102+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:15.469795+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:15.670082+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:15.879217+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:16.076699+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:16.290061+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:16.496598+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:16.698855+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:16.902929+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:17.117222+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:17.308561+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:17.516582+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:17.721321+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:17.920932+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:18.121001+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:18.328847+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:18.536434+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:18.732656+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:18.939440+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:19.139051+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:19.350999+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:19.545403+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:19.756532+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:19.962220+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:20.169491+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:20.374971+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:20.578741+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:20.783738+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:20.979632+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:21.184489+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:21.394016+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:21.593001+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:21.801420+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:22.002073+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:22.200162+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:22.408825+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:22.610410+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:22.808093+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:23.015582+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:23.221801+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:23.427208+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:23.632787+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:23.830268+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:24.026020+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:24.230932+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:24.439411+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:24.639875+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:24.839937+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:28.176990+00:00", "event_type": "runtime", "message": "AI disabled", "context": {}}
+{"timestamp": "2026-04-22T10:06:52.074959+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:52.278674+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:52.496389+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:52.681014+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:52.887629+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:53.093284+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:53.297674+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:53.501093+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:53.702713+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:53.901130+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:54.121345+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:54.329884+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:54.542030+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:54.730551+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:54.937852+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:55.142921+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:55.358354+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:55.541198+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:55.751851+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:55.957348+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:56.156003+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:56.364562+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:56.571879+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:56.771358+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:56.971995+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:57.171383+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:57.371759+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:57.582012+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:57.778364+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:57.987810+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:58.192057+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:58.393230+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:58.592651+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:58.797257+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:59.000142+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:59.214570+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:59.408988+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:59.605889+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:06:59.812593+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:00.013208+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:00.213688+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:00.416745+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:00.619135+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:00.823029+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:01.034079+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:01.239961+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:01.432561+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:28.485060+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:28.681286+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:28.884198+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:29.099541+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:29.302863+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:29.495382+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:29.700195+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:29.910808+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:30.114177+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:30.313304+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:30.522553+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:30.723596+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:30.917245+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:31.131359+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:31.329496+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:31.531317+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:31.734596+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:31.938606+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:32.140566+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:32.342406+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:32.541037+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:32.744599+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:32.959307+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:33.153046+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:33.352997+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:33.557078+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T10:07:33.884002+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:25:39.503718+00:00", "event_type": "runtime", "message": "FSM INIT -> CONNECTED (LINK_ESTABLISHED)", "context": {}}
+{"timestamp": "2026-04-22T11:25:39.514475+00:00", "event_type": "runtime", "message": "Simulation telemetry started", "context": {}}
+{"timestamp": "2026-04-22T11:25:46.831628+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:25:46.832920+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T11:26:23.402985+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:26:23.403728+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T11:26:53.766058+00:00", "event_type": "runtime", "message": "User zones cleared", "context": {}}
+{"timestamp": "2026-04-22T11:27:06.590213+00:00", "event_type": "runtime", "message": "Zone added: no_fly-1", "context": {}}
+{"timestamp": "2026-04-22T11:27:13.489485+00:00", "event_type": "runtime", "message": "User zones cleared", "context": {}}
+{"timestamp": "2026-04-22T11:29:12.171555+00:00", "event_type": "runtime", "message": "Competition boundary updated", "context": {}}
+{"timestamp": "2026-04-22T11:29:12.215067+00:00", "event_type": "runtime", "message": "Competition boundary violation detected", "context": {}}
+{"timestamp": "2026-04-22T11:29:16.400588+00:00", "event_type": "runtime", "message": "Competition boundary cleared", "context": {}}
+{"timestamp": "2026-04-22T11:29:25.141113+00:00", "event_type": "runtime", "message": "Competition boundary updated", "context": {}}
+{"timestamp": "2026-04-22T11:29:42.626275+00:00", "event_type": "runtime", "message": "Zone added: no_fly-2", "context": {}}
+{"timestamp": "2026-04-22T11:29:55.443302+00:00", "event_type": "runtime", "message": "Zone added: no_fly-3", "context": {}}
+{"timestamp": "2026-04-22T11:30:10.303227+00:00", "event_type": "runtime", "message": "Zone added: no_fly-4", "context": {}}
+{"timestamp": "2026-04-22T11:30:57.104457+00:00", "event_type": "runtime", "message": "Zone added: no_fly-5", "context": {}}
+{"timestamp": "2026-04-22T11:31:21.255331+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:31:21.257121+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T11:31:58.012821+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:31:58.014473+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T11:46:34.336459+00:00", "event_type": "runtime", "message": "FSM INIT -> CONNECTED (LINK_ESTABLISHED)", "context": {}}
+{"timestamp": "2026-04-22T11:46:34.346009+00:00", "event_type": "runtime", "message": "Simulation telemetry started", "context": {}}
+{"timestamp": "2026-04-22T11:46:41.722468+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:46:41.724200+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T11:47:02.629436+00:00", "event_type": "runtime", "message": "Control authority set to manual", "context": {}}
+{"timestamp": "2026-04-22T11:47:02.630449+00:00", "event_type": "runtime", "message": "Flight mode requested: QSTABILIZE", "context": {}}
+{"timestamp": "2026-04-22T11:47:18.339471+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:47:18.340950+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T11:47:54.739107+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:47:54.740513+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T11:48:31.416597+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:48:31.418483+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T11:49:07.996576+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:49:07.998691+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T11:49:19.891087+00:00", "event_type": "runtime", "message": "Settings updated", "context": {}}
+{"timestamp": "2026-04-22T11:49:24.352569+00:00", "event_type": "runtime", "message": "Settings updated", "context": {}}
+{"timestamp": "2026-04-22T11:49:44.722010+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:49:44.723123+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T11:50:21.217986+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:50:21.219999+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T11:50:57.842925+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:50:57.844201+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T11:51:29.238004+00:00", "event_type": "runtime", "message": "User zones cleared", "context": {}}
+{"timestamp": "2026-04-22T11:51:43.433182+00:00", "event_type": "runtime", "message": "Zone added: no_fly-1", "context": {}}
+{"timestamp": "2026-04-22T11:57:37.465134+00:00", "event_type": "runtime", "message": "User zones cleared", "context": {}}
+{"timestamp": "2026-04-22T11:58:26.094699+00:00", "event_type": "runtime", "message": "Zone added: no_fly-2", "context": {}}
+{"timestamp": "2026-04-22T11:58:46.528817+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:58:46.531073+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T11:59:22.480135+00:00", "event_type": "runtime", "message": "Zone added: mission-3", "context": {}}
+{"timestamp": "2026-04-22T11:59:22.946694+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:59:22.948352+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T11:59:51.129221+00:00", "event_type": "runtime", "message": "Zone added: defense-4", "context": {}}
+{"timestamp": "2026-04-22T11:59:51.229534+00:00", "event_type": "runtime", "message": "Flight mode requested: QRTL", "context": {}}
+{"timestamp": "2026-04-22T11:59:51.231116+00:00", "event_type": "runtime", "message": "RTL triggered: entered defense zone", "context": {}}
+{"timestamp": "2026-04-22T11:59:51.231987+00:00", "event_type": "runtime", "message": "Defense/HSS violation detected", "context": {}}
+{"timestamp": "2026-04-22T11:59:59.556031+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T11:59:59.558060+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T12:00:35.950331+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T12:00:35.951079+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T12:01:12.597981+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T12:01:12.599895+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T12:01:40.108701+00:00", "event_type": "runtime", "message": "AI enabled", "context": {}}
+{"timestamp": "2026-04-22T12:01:40.802251+00:00", "event_type": "runtime", "message": "AI disabled", "context": {}}
+{"timestamp": "2026-04-22T12:01:48.976528+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T12:01:48.978231+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T12:02:15.860238+00:00", "event_type": "runtime", "message": "AI enabled", "context": {}}
+{"timestamp": "2026-04-22T12:02:17.481923+00:00", "event_type": "runtime", "message": "AI disabled", "context": {}}
+{"timestamp": "2026-04-22T12:02:25.589491+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T12:02:25.590454+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T12:03:02.197340+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T12:03:02.199525+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-04-22T12:03:38.932622+00:00", "event_type": "runtime", "message": "Avoidance route recalculated", "context": {}}
+{"timestamp": "2026-04-22T12:03:38.934631+00:00", "event_type": "runtime", "message": "No-fly avoidance reroute triggered", "context": {}}
+{"timestamp": "2026-05-04T18:35:38.680453+00:00", "event_type": "runtime", "message": "Симуляция вражеского дрона 'quadcopter' загружена", "context": {}}
+{"timestamp": "2026-05-04T18:35:41.724812+00:00", "event_type": "runtime", "message": "FSM: ИНИЦ. -> СВЯЗЬ (связь установлена)", "context": {}}
+{"timestamp": "2026-05-04T18:35:41.731988+00:00", "event_type": "runtime", "message": "Телеметрия симулятора запущена", "context": {}}
+{"timestamp": "2026-05-04T18:36:23.255324+00:00", "event_type": "runtime", "message": "Настройки обновлены", "context": {}}
+{"timestamp": "2026-05-04T18:37:32.009956+00:00", "event_type": "runtime", "message": "Настройки обновлены", "context": {}}
+{"timestamp": "2026-05-04T18:37:32.010698+00:00", "event_type": "runtime", "message": "Симуляция вражеского дрона 'fixed-wing' загружена", "context": {}}
+{"timestamp": "2026-05-04T18:38:13.458599+00:00", "event_type": "runtime", "message": "Пользовательские зоны очищены", "context": {}}
+{"timestamp": "2026-05-04T18:38:18.508823+00:00", "event_type": "runtime", "message": "Граница соревнования очищена", "context": {}}
+{"timestamp": "2026-05-04T18:38:36.420670+00:00", "event_type": "runtime", "message": "Зона добавлена: interception 1", "context": {}}
+{"timestamp": "2026-05-04T18:38:40.731553+00:00", "event_type": "runtime", "message": "ИИ включен", "context": {}}
+{"timestamp": "2026-05-04T18:39:25.341530+00:00", "event_type": "runtime", "message": "ВНИМАНИЕ! Обнаружена цель в зоне перехвата (Команда 2). Начинаю перехват!", "context": {}}
+{"timestamp": "2026-05-04T18:39:25.342636+00:00", "event_type": "runtime", "message": "Источник управления: ИИ", "context": {}}
+{"timestamp": "2026-05-04T18:39:25.343357+00:00", "event_type": "runtime", "message": "Профиль соревнования готов для VTOL Talister (Matek H743-Wing)", "context": {}}
+{"timestamp": "2026-05-04T18:39:25.343898+00:00", "event_type": "runtime", "message": "Симуляция: двигатели запущены, взлет выполнен", "context": {}}
+{"timestamp": "2026-05-04T18:39:25.344549+00:00", "event_type": "runtime", "message": "FSM: СВЯЗЬ -> ГОТОВ (взведение)", "context": {}}
+{"timestamp": "2026-05-04T18:39:25.346349+00:00", "event_type": "runtime", "message": "Запрошен режим полета: GUIDED", "context": {}}
+{"timestamp": "2026-05-30T07:24:41.288609+00:00", "event_type": "runtime", "message": "Симуляция вражеского дрона 'fixed-wing' загружена", "context": {}}
+{"timestamp": "2026-05-30T07:24:41.766193+00:00", "event_type": "runtime", "message": "FSM: ИНИЦ. -> СВЯЗЬ (связь установлена)", "context": {}}
+{"timestamp": "2026-05-30T07:24:41.774484+00:00", "event_type": "runtime", "message": "Телеметрия симулятора запущена (ИИ автоматически включен)", "context": {}}
+{"timestamp": "2026-05-30T07:25:53.761812+00:00", "event_type": "runtime", "message": "Симуляция вражеского дрона 'fixed-wing' загружена", "context": {}}
+{"timestamp": "2026-05-30T07:25:53.912978+00:00", "event_type": "runtime", "message": "FSM: ИНИЦ. -> СВЯЗЬ (связь установлена)", "context": {}}
+{"timestamp": "2026-05-30T07:25:53.917652+00:00", "event_type": "runtime", "message": "Телеметрия симулятора запущена (ИИ автоматически включен)", "context": {}}
+{"timestamp": "2026-05-30T07:34:18.653931+00:00", "event_type": "runtime", "message": "Симуляция вражеского дрона 'fixed-wing' загружена", "context": {}}
+{"timestamp": "2026-05-30T07:34:19.298901+00:00", "event_type": "runtime", "message": "FSM: ИНИЦ. -> СВЯЗЬ (связь установлена)", "context": {}}
+{"timestamp": "2026-05-30T07:34:19.303523+00:00", "event_type": "runtime", "message": "Телеметрия симулятора запущена (ИИ автоматически включен)", "context": {}}
+{"timestamp": "2026-05-30T07:34:28.098386+00:00", "event_type": "runtime", "message": "Миссия очищена", "context": {}}
+{"timestamp": "2026-05-30T07:34:30.436916+00:00", "event_type": "runtime", "message": "Граница соревнования очищена", "context": {}}
+{"timestamp": "2026-05-30T07:34:33.529613+00:00", "event_type": "runtime", "message": "Пользовательские зоны очищены", "context": {}}
+{"timestamp": "2026-05-30T07:34:43.742733+00:00", "event_type": "runtime", "message": "Зона добавлена: interception 1", "context": {}}
+{"timestamp": "2026-05-30T07:35:39.806828+00:00", "event_type": "runtime", "message": "ВНИМАНИЕ! Обнаружена цель в зоне перехвата (Команда 2). Начинаю перехват!", "context": {}}
+{"timestamp": "2026-05-30T07:35:39.808124+00:00", "event_type": "runtime", "message": "Источник управления: ИИ", "context": {}}
+{"timestamp": "2026-05-30T07:35:39.808895+00:00", "event_type": "runtime", "message": "Профиль соревнования готов для VTOL Talister (Matek H743-Wing)", "context": {}}
+{"timestamp": "2026-05-30T07:35:39.809498+00:00", "event_type": "runtime", "message": "FSM: СВЯЗЬ -> ГОТОВ (взведение)", "context": {}}
+{"timestamp": "2026-05-30T07:35:39.810762+00:00", "event_type": "runtime", "message": "Запрошен режим полета: GUIDED", "context": {}}
+{"timestamp": "2026-05-30T07:35:39.811230+00:00", "event_type": "runtime", "message": "Симуляция: двигатели запущены, взлет выполнен", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.778949+00:00", "event_type": "runtime", "message": "ПЕРЕХВАТ ВЫПОЛНЕН! Дистанция 7.7 м. Возврат на базу.", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.781396+00:00", "event_type": "runtime", "message": "FSM: ГОТОВ -> ВОЗВРАТ (включен RTL)", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.782932+00:00", "event_type": "runtime", "message": "Источник управления: авто", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.784732+00:00", "event_type": "runtime", "message": "Запрошен режим полета: QRTL", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.785709+00:00", "event_type": "runtime", "message": "RTL активирован: перехват завершен", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.787567+00:00", "event_type": "runtime", "message": "ВНИМАНИЕ! Обнаружена цель в зоне перехвата (Команда 2). Начинаю перехват!", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.787977+00:00", "event_type": "runtime", "message": "Источник управления: ИИ", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.788334+00:00", "event_type": "runtime", "message": "Профиль соревнования готов для VTOL Talister (Matek H743-Wing)", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.788804+00:00", "event_type": "runtime", "message": "Запрошен режим полета: GUIDED", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.789136+00:00", "event_type": "runtime", "message": "Симуляция: двигатели запущены, взлет выполнен", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.968613+00:00", "event_type": "runtime", "message": "ПЕРЕХВАТ ВЫПОЛНЕН! Дистанция 6.2 м. Возврат на базу.", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.971954+00:00", "event_type": "runtime", "message": "RTL отклонен: состояние RTL не допускает возврат", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.977626+00:00", "event_type": "runtime", "message": "ВНИМАНИЕ! Обнаружена цель в зоне перехвата (Команда 2). Начинаю перехват!", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.978906+00:00", "event_type": "runtime", "message": "Источник управления: ИИ", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.979629+00:00", "event_type": "runtime", "message": "Профиль соревнования готов для VTOL Talister (Matek H743-Wing)", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.980176+00:00", "event_type": "runtime", "message": "Запрошен режим полета: GUIDED", "context": {}}
+{"timestamp": "2026-05-30T07:36:11.980563+00:00", "event_type": "runtime", "message": "Симуляция: двигатели запущены, взлет выполнен", "context": {}}
+{"timestamp": "2026-05-30T07:36:12.190543+00:00", "event_type": "runtime", "message": "ПЕРЕХВАТ ВЫПОЛНЕН! Дистанция 8.5 м. Возврат на базу.", "context": {}}
+{"timestamp": "2026-05-30T07:36:12.193174+00:00", "event_type": "runtime", "message": "RTL отклонен: состояние RTL не допускает возврат", "context": {}}
+{"timestamp": "2026-05-30T07:36:12.197693+00:00", "event_type": "runtime", "message": "ВНИМАНИЕ! Обнаружена цель в зоне перехвата (Команда 2). Начинаю перехват!", "context": {}}
+{"timestamp": "2026-05-30T07:36:12.198452+00:00", "event_type": "runtime", "message": "Источник управления: ИИ", "context": {}}
+{"timestamp": "2026-05-30T07:36:12.198897+00:00", "event_type": "runtime", "message": "Профиль соревнования готов для VTOL Talister (Matek H743-Wing)", "context": {}}
+{"timestamp": "2026-05-30T07:36:12.199314+00:00", "event_type": "runtime", "message": "Запрошен режим полета: GUIDED", "context": {}}
+{"timestamp": "2026-05-30T07:36:12.199627+00:00", "event_type": "runtime", "message": "Симуляция: двигатели запущены, взлет выполнен", "context": {}}
+{"timestamp": "2026-05-30T07:36:13.598870+00:00", "event_type": "runtime", "message": "ПЕРЕХВАТ ВЫПОЛНЕН! Дистанция 9.0 м. Возврат на базу.", "context": {}}
+{"timestamp": "2026-05-30T07:36:13.602099+00:00", "event_type": "runtime", "message": "RTL отклонен: состояние RTL не допускает возврат", "context": {}}
+{"timestamp": "2026-05-30T07:36:13.607606+00:00", "event_type": "runtime", "message": "ВНИМАНИЕ! Обнаружена цель в зоне перехвата (Команда 2). Начинаю перехват!", "context": {}}
+{"timestamp": "2026-05-30T07:36:13.608559+00:00", "event_type": "runtime", "message": "Источник управления: ИИ", "context": {}}
+{"timestamp": "2026-05-30T07:36:13.608995+00:00", "event_type": "runtime", "message": "Профиль соревнования готов для VTOL Talister (Matek H743-Wing)", "context": {}}
+{"timestamp": "2026-05-30T07:36:13.609523+00:00", "event_type": "runtime", "message": "Запрошен режим полета: GUIDED", "context": {}}
+{"timestamp": "2026-05-30T07:36:13.609880+00:00", "event_type": "runtime", "message": "Симуляция: двигатели запущены, взлет выполнен", "context": {}}
+{"timestamp": "2026-05-30T07:36:13.810617+00:00", "event_type": "runtime", "message": "ПЕРЕХВАТ ВЫПОЛНЕН! Дистанция 8.7 м. Возврат на базу.", "context": {}}
+{"timestamp": "2026-05-30T07:36:13.812331+00:00", "event_type": "runtime", "message": "RTL отклонен: состояние RTL не допускает возврат", "context": {}}
+{"timestamp": "2026-05-30T07:36:13.815774+00:00", "event_type": "runtime", "message": "ВНИМАНИЕ! Обнаружена цель в зоне перехвата (Команда 2). Начинаю перехват!", "context": {}}
+{"timestamp": "2026-05-30T07:36:13.816926+00:00", "event_type": "runtime", "message": "Источник управления: ИИ", "context": {}}
+{"timestamp": "2026-05-30T07:36:13.817888+00:00", "event_type": "runtime", "message": "Профиль соревнования готов для VTOL Talister (Matek H743-Wing)", "context": {}}
+{"timestamp": "2026-05-30T07:36:13.819646+00:00", "event_type": "runtime", "message": "Запрошен режим полета: GUIDED", "context": {}}
+{"timestamp": "2026-05-30T07:36:13.820667+00:00", "event_type": "runtime", "message": "Симуляция: двигатели запущены, взлет выполнен", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.143597+00:00", "event_type": "runtime", "message": "ПЕРЕХВАТ ВЫПОЛНЕН! Дистанция 7.5 м. Возврат на базу.", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.146346+00:00", "event_type": "runtime", "message": "RTL отклонен: состояние RTL не допускает возврат", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.152018+00:00", "event_type": "runtime", "message": "ВНИМАНИЕ! Обнаружена цель в зоне перехвата (Команда 2). Начинаю перехват!", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.152630+00:00", "event_type": "runtime", "message": "Источник управления: ИИ", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.153037+00:00", "event_type": "runtime", "message": "Профиль соревнования готов для VTOL Talister (Matek H743-Wing)", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.153552+00:00", "event_type": "runtime", "message": "Запрошен режим полета: GUIDED", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.153881+00:00", "event_type": "runtime", "message": "Симуляция: двигатели запущены, взлет выполнен", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.352554+00:00", "event_type": "runtime", "message": "ПЕРЕХВАТ ВЫПОЛНЕН! Дистанция 4.3 м. Возврат на базу.", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.353927+00:00", "event_type": "runtime", "message": "RTL отклонен: состояние RTL не допускает возврат", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.356091+00:00", "event_type": "runtime", "message": "ВНИМАНИЕ! Обнаружена цель в зоне перехвата (Команда 2). Начинаю перехват!", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.356557+00:00", "event_type": "runtime", "message": "Источник управления: ИИ", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.356995+00:00", "event_type": "runtime", "message": "Профиль соревнования готов для VTOL Talister (Matek H743-Wing)", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.357495+00:00", "event_type": "runtime", "message": "Запрошен режим полета: GUIDED", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.357843+00:00", "event_type": "runtime", "message": "Симуляция: двигатели запущены, взлет выполнен", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.559661+00:00", "event_type": "runtime", "message": "ПЕРЕХВАТ ВЫПОЛНЕН! Дистанция 1.3 м. Возврат на базу.", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.562074+00:00", "event_type": "runtime", "message": "RTL отклонен: состояние RTL не допускает возврат", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.567360+00:00", "event_type": "runtime", "message": "ВНИМАНИЕ! Обнаружена цель в зоне перехвата (Команда 2). Начинаю перехват!", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.568213+00:00", "event_type": "runtime", "message": "Источник управления: ИИ", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.568957+00:00", "event_type": "runtime", "message": "Профиль соревнования готов для VTOL Talister (Matek H743-Wing)", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.570291+00:00", "event_type": "runtime", "message": "Запрошен режим полета: GUIDED", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.570765+00:00", "event_type": "runtime", "message": "Симуляция: двигатели запущены, взлет выполнен", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.759496+00:00", "event_type": "runtime", "message": "ПЕРЕХВАТ ВЫПОЛНЕН! Дистанция 1.5 м. Возврат на базу.", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.761582+00:00", "event_type": "runtime", "message": "RTL отклонен: состояние RTL не допускает возврат", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.766067+00:00", "event_type": "runtime", "message": "ВНИМАНИЕ! Обнаружена цель в зоне перехвата (Команда 2). Начинаю перехват!", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.767031+00:00", "event_type": "runtime", "message": "Источник управления: ИИ", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.767478+00:00", "event_type": "runtime", "message": "Профиль соревнования готов для VTOL Talister (Matek H743-Wing)", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.767994+00:00", "event_type": "runtime", "message": "Запрошен режим полета: GUIDED", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.768341+00:00", "event_type": "runtime", "message": "Симуляция: двигатели запущены, взлет выполнен", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.955250+00:00", "event_type": "runtime", "message": "ПЕРЕХВАТ ВЫПОЛНЕН! Дистанция 4.1 м. Возврат на базу.", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.956296+00:00", "event_type": "runtime", "message": "RTL отклонен: состояние RTL не допускает возврат", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.957782+00:00", "event_type": "runtime", "message": "ВНИМАНИЕ! Обнаружена цель в зоне перехвата (Команда 2). Начинаю перехват!", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.958198+00:00", "event_type": "runtime", "message": "Источник управления: ИИ", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.958573+00:00", "event_type": "runtime", "message": "Профиль соревнования готов для VTOL Talister (Matek H743-Wing)", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.959113+00:00", "event_type": "runtime", "message": "Запрошен режим полета: GUIDED", "context": {}}
+{"timestamp": "2026-05-30T07:36:21.959512+00:00", "event_type": "runtime", "message": "Симуляция: двигатели запущены, взлет выполнен", "context": {}}
+{"timestamp": "2026-05-30T07:36:22.155316+00:00", "event_type": "runtime", "message": "ПЕРЕХВАТ ВЫПОЛНЕН! Дистанция 6.5 м. Возврат на базу.", "context": {}}
+{"timestamp": "2026-05-30T07:36:22.157134+00:00", "event_type": "runtime", "message": "RTL отклонен: состояние RTL не допускает возврат", "context": {}}
+{"timestamp": "2026-05-30T07:36:22.162469+00:00", "event_type": "runtime", "message": "ВНИМАНИЕ! Обнаружена цель в зоне перехвата (Команда 2). Начинаю перехват!", "context": {}}
+{"timestamp": "2026-05-30T07:36:22.163516+00:00", "event_type": "runtime", "message": "Источник управления: ИИ", "context": {}}
+{"timestamp": "2026-05-30T07:36:22.164349+00:00", "event_type": "runtime", "message": "Профиль соревнования готов для VTOL Talister (Matek H743-Wing)", "context": {}}
+{"timestamp": "2026-05-30T07:36:22.165268+00:00", "event_type": "runtime", "message": "Запрошен режим полета: GUIDED", "context": {}}
+{"timestamp": "2026-05-30T07:36:22.165922+00:00", "event_type": "runtime", "message": "Симуляция: двигатели запущены, взлет выполнен", "context": {}}
+{"timestamp": "2026-05-30T07:36:22.382246+00:00", "event_type": "runtime", "message": "ПЕРЕХВАТ ВЫПОЛНЕН! Дистанция 8.7 м. Возврат на базу.", "context": {}}
+{"timestamp": "2026-05-30T07:36:22.383618+00:00", "event_type": "runtime", "message": "RTL отклонен: состояние RTL не допускает возврат", "context": {}}
+{"timestamp": "2026-05-30T07:36:22.386151+00:00", "event_type": "runtime", "message": "ВНИМАНИЕ! Обнаружена цель в зоне перехвата (Команда 2). Начинаю перехват!", "context": {}}
+{"timestamp": "2026-05-30T07:36:22.386841+00:00", "event_type": "runtime", "message": "Источник управления: ИИ", "context": {}}
+{"timestamp": "2026-05-30T07:36:22.387256+00:00", "event_type": "runtime", "message": "Профиль соревнования готов для VTOL Talister (Matek H743-Wing)", "context": {}}
+{"timestamp": "2026-05-30T07:36:22.387869+00:00", "event_type": "runtime", "message": "Запрошен режим полета: GUIDED", "context": {}}
+{"timestamp": "2026-05-30T07:36:22.388256+00:00", "event_type": "runtime", "message": "Симуляция: двигатели запущены, взлет выполнен", "context": {}}
+{"timestamp": "2026-05-30T07:36:29.720466+00:00", "event_type": "runtime", "message": "Симуляция вражеского дрона 'fixed-wing' загружена", "context": {}}
+{"timestamp": "2026-05-30T07:36:30.010949+00:00", "event_type": "runtime", "message": "FSM: ИНИЦ. -> СВЯЗЬ (связь установлена)", "context": {}}
+{"timestamp": "2026-05-30T07:36:30.015383+00:00", "event_type": "runtime", "message": "Телеметрия симулятора запущена (ИИ автоматически включен)", "context": {}}
+{"timestamp": "2026-05-30T07:36:37.008033+00:00", "event_type": "runtime", "message": "Миссия очищена", "context": {}}
+{"timestamp": "2026-05-30T07:36:38.969361+00:00", "event_type": "runtime", "message": "Граница соревнования очищена", "context": {}}
+{"timestamp": "2026-05-30T07:36:42.403798+00:00", "event_type": "runtime", "message": "Пользовательские зоны очищены", "context": {}}
+{"timestamp": "2026-05-30T07:37:01.480059+00:00", "event_type": "runtime", "message": "Настройки обновлены", "context": {}}
+{"timestamp": "2026-05-30T07:37:38.727606+00:00", "event_type": "runtime", "message": "Зона добавлена: Запретная зона 1", "context": {}}
+{"timestamp": "2026-05-30T07:37:51.851879+00:00", "event_type": "runtime", "message": "Зона добавлена: Запретная зона 2", "context": {}}
+{"timestamp": "2026-05-30T07:38:02.282569+00:00", "event_type": "runtime", "message": "Зона добавлена: Запретная зона 3", "context": {}}
+{"timestamp": "2026-05-30T07:38:21.311001+00:00", "event_type": "runtime", "message": "Зона добавлена: Запретная зона 4", "context": {}}
+{"timestamp": "2026-05-30T07:39:32.421528+00:00", "event_type": "runtime", "message": "FSM: СВЯЗЬ -> ГОТОВ (взведение)", "context": {}}
+{"timestamp": "2026-05-30T07:39:35.122921+00:00", "event_type": "runtime", "message": "В режиме симуляции миссия отмечена как загруженная", "context": {}}
+{"timestamp": "2026-05-30T07:39:35.138615+00:00", "event_type": "runtime", "message": "FSM: ГОТОВ -> МИССИЯ (старт миссии)", "context": {}}
+{"timestamp": "2026-05-30T07:39:35.139078+00:00", "event_type": "runtime", "message": "Источник управления: авто", "context": {}}
+{"timestamp": "2026-05-30T07:39:35.139518+00:00", "event_type": "runtime", "message": "Запрошен режим полета: AUTO", "context": {}}
+{"timestamp": "2026-05-30T07:39:35.140041+00:00", "event_type": "runtime", "message": "Миссия запущена", "context": {}}
+{"timestamp": "2026-05-30T07:43:21.519066+00:00", "event_type": "runtime", "message": "Зона добавлена: Запретная зона 5", "context": {}}
+{"timestamp": "2026-05-30T07:44:12.496248+00:00", "event_type": "runtime", "message": "Маршрут обхода пересчитан", "context": {}}
+{"timestamp": "2026-05-30T07:44:12.496822+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:44:16.532139+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:44:16.533463+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:44:20.628702+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:44:20.629601+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:44:24.695473+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:44:24.697924+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:44:28.779790+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:44:28.782216+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:44:32.897075+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:44:32.897961+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:44:37.010855+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:44:37.014084+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:44:41.046682+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:44:41.047679+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:44:45.207699+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:44:45.210393+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:44:49.284136+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:44:49.284983+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:44:53.394332+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:44:53.396082+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:44:57.441631+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:44:57.443273+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:45:01.537168+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:45:01.537921+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:45:05.640343+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:45:05.641780+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:45:09.733209+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:45:09.734009+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:45:13.841544+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:45:13.844159+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:45:17.921453+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:45:17.922373+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}
+{"timestamp": "2026-05-30T07:45:21.956143+00:00", "event_type": "runtime", "message": "Маршрут обхода не найден: требуется вмешательство оператора", "context": {}}
+{"timestamp": "2026-05-30T07:45:21.959917+00:00", "event_type": "runtime", "message": "Запущен обход запретной зоны", "context": {}}

@@ -1,0 +1,11 @@
+PyQt6<6.11,>=6.10
+PyQt6-WebEngine<6.11,>=6.10
+aiohttp>=3.11
+numpy>=1.26
+opencv-python>=4.10
+pymavlink>=2.4
+PyYAML>=6.0
+shapely>=2.0
+
+[dev]
+pytest>=8.0
