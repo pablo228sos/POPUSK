@@ -1,79 +1,70 @@
 from __future__ import annotations
-
 import json
 from pathlib import Path
-
 from PyQt6.QtCore import QObject, QUrl, pyqtSignal, pyqtSlot
 from PyQt6.QtWebChannel import QWebChannel
-from PyQt6.QtWebEngineCore import QWebEngineProfile
 from PyQt6.QtWebEngineWidgets import QWebEngineView
-
-from teknofest_gcs.config.settings import MapSettings
-from teknofest_gcs.core.models import GeoPoint, OtherDrone, Zone
-
 
 class MapBridge(QObject):
     map_clicked = pyqtSignal(float, float)
+    vehicle_clicked = pyqtSignal(int)
 
     @pyqtSlot(float, float)
     def reportMapClick(self, lat: float, lon: float) -> None:
         self.map_clicked.emit(lat, lon)
 
+    @pyqtSlot(int)
+    def reportVehicleClicked(self, vehicle_id: int) -> None:
+        self.vehicle_clicked.emit(vehicle_id)
+
 
 class MapView(QWebEngineView):
     map_clicked = pyqtSignal(float, float)
+    vehicle_clicked = pyqtSignal(int)
 
-    def __init__(self, settings: MapSettings) -> None:
+    def __init__(self) -> None:
         super().__init__()
-        self.settings = settings
         self._ready = False
         self._pending_scripts: list[str] = []
+        
         self._bridge = MapBridge()
         self._bridge.map_clicked.connect(self.map_clicked.emit)
+        self._bridge.vehicle_clicked.connect(self.vehicle_clicked.emit)
 
-        profile = QWebEngineProfile.defaultProfile()
-        cache_path = Path(settings.cache_path).resolve()
-        cache_path.mkdir(parents=True, exist_ok=True)
-        profile.setCachePath(str(cache_path))
-        profile.setPersistentStoragePath(str(cache_path))
-
-        channel = QWebChannel(self.page())
-        channel.registerObject("bridge", self._bridge)
-        self.page().setWebChannel(channel)
+        # Setup WebChannel
+        self._channel = QWebChannel(self.page())
+        self._channel.registerObject("bridge", self._bridge)
+        self.page().setWebChannel(self._channel)
 
         self.loadFinished.connect(self._on_loaded)
+        
+        # Load local HTML
         html_path = Path(__file__).resolve().parent / "assets" / "map" / "index.html"
         self.setUrl(QUrl.fromLocalFile(str(html_path)))
 
-    def set_vehicle(self, point: GeoPoint, heading_deg: float, mode: str) -> None:
-        payload = {"lat": point.lat, "lon": point.lon, "heading": heading_deg, "mode": mode}
-        self._run(f"window.gcsUpdateVehicle({json.dumps(payload)});")
+    def update_vehicles(self, vehicles: list) -> None:
+        fleet_data = []
+        for v in vehicles:
+            fleet_data.append({
+                "id": v.id,
+                "lat": v.lat,
+                "lon": v.lon,
+                "alt": v.alt,
+                "battery": v.battery_percent,
+                "battery_v": v.battery_v,
+                "rssi": v.rssi,
+                "heading": v.heading,
+                "mode": v.flight_mode,
+                "armed": v.armed
+            })
+        self._run(f"window.gcsUpdateVehicles({json.dumps(fleet_data)});")
 
-    def set_other_drones(self, drones: list[OtherDrone]) -> None:
-        payload = [
-            {"team_id": drone.team_id, "lat": drone.position.lat, "lon": drone.position.lon, "latency_ms": drone.latency_ms}
-            for drone in drones
-        ]
-        self._run(f"window.gcsUpdateOtherDrones({json.dumps(payload)});")
+    def select_vehicle(self, vehicle_id: int) -> None:
+        self._run(f"window.gcsSelectVehicle({vehicle_id});")
 
-    def set_zones(self, zones: list[Zone]) -> None:
-        payload = []
-        for zone in zones:
-            payload.append(
-                {
-                    "id": zone.identifier,
-                    "type": zone.zone_type.value,
-                    "label": zone.label,
-                    "points": [{"lat": p.lat, "lon": p.lon} for p in zone.points],
-                    "center": {"lat": zone.center.lat, "lon": zone.center.lon} if zone.center else None,
-                    "radius_m": zone.radius_m,
-                }
-            )
-        self._run(f"window.gcsUpdateZones({json.dumps(payload)});")
-
-    def set_route(self, route: list[GeoPoint]) -> None:
-        payload = [{"lat": point.lat, "lon": point.lon} for point in route]
-        self._run(f"window.gcsUpdateRoute({json.dumps(payload)});")
+    def update_route(self, route_points: list) -> None:
+        route_data = [{"lat": p.lat, "lon": p.lon} for p in route_points]
+        self._run(f"window.gcsUpdateRoute({json.dumps(route_data)});")
 
     def zoom_in(self) -> None:
         self._run("window.gcsZoomIn();")
@@ -81,32 +72,24 @@ class MapView(QWebEngineView):
     def zoom_out(self) -> None:
         self._run("window.gcsZoomOut();")
 
-    def center_on_vehicle(self) -> None:
+    def center_on_selected(self) -> None:
         self._run("window.gcsCenterOnVehicle();")
-
-    def set_editor_mode(self, mode: str, label: str = "") -> None:
-        payload = {"mode": mode, "label": label}
-        self._run(f"window.gcsSetEditorState({json.dumps(payload)});")
-
-    def set_draft_overlay(self, points: list[GeoPoint], zone_type: str = "", radius_m: float | None = None) -> None:
-        payload = {
-            "points": [{"lat": point.lat, "lon": point.lon} for point in points],
-            "zone_type": zone_type,
-            "radius_m": radius_m,
-        }
-        self._run(f"window.gcsUpdateDraft({json.dumps(payload)});")
 
     def _on_loaded(self, ok: bool) -> None:
         if not ok:
+            print("[MapView] Error loading Leaflet HTML.")
             return
         self._ready = True
+        
+        # Bootstrap map with default configs (Istanbul/Teknofest test center)
         config = {
-            "tileUrl": self.settings.tile_url,
-            "attribution": self.settings.attribution,
-            "center": {"lat": self.settings.center_lat, "lon": self.settings.center_lon},
-            "zoom": self.settings.zoom,
+            "tileUrl": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            "attribution": "&copy; OpenStreetMap contributors",
+            "center": {"lat": 41.143, "lon": 29.081},
+            "zoom": 16
         }
         self.page().runJavaScript(f"window.bootstrapMap({json.dumps(config)});")
+        
         for script in self._pending_scripts:
             self.page().runJavaScript(script)
         self._pending_scripts.clear()
