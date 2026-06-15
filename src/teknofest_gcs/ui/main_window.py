@@ -154,6 +154,12 @@ class MainWindow(QMainWindow):
         main_layout.setContentsMargins(10, 10, 10, 10)
         main_layout.setSpacing(10)
 
+        # Map View (Expanding center) - instantiated first to prevent AttributeErrors in panels
+        self.map_view = MapView()
+        self.map_view.map_clicked.connect(self.on_map_clicked)
+        self.map_view.vehicle_clicked.connect(self.on_vehicle_marker_clicked)
+        self.map_view.setStyleSheet("border-radius: 12px; border: 1px solid #334155;")
+
         # 1. Top Bar QFrame
         top_bar = self.create_top_bar()
         main_layout.addWidget(top_bar)
@@ -166,11 +172,7 @@ class MainWindow(QMainWindow):
         left_panel = self.create_left_panel()
         middle_layout.addWidget(left_panel)
 
-        # Map View (Expanding center)
-        self.map_view = MapView()
-        self.map_view.map_clicked.connect(self.on_map_clicked)
-        self.map_view.vehicle_clicked.connect(self.on_vehicle_marker_clicked)
-        self.map_view.setStyleSheet("border-radius: 12px; border: 1px solid #334155;")
+        # Map View added to middle row layout
         middle_layout.addWidget(self.map_view, stretch=3)
 
         # Right Panel (Fixed width)
