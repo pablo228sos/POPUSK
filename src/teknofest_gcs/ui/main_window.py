@@ -4,7 +4,7 @@ import time
 from pathlib import Path
 from PyQt6.QtWidgets import (
     QMainWindow, QWidget, QHBoxLayout, QVBoxLayout, QFrame, 
-    QPushButton, QLabel, QStackedLayout, QListWidget, QListWidgetItem, 
+    QPushButton, QLabel, QListWidget, QListWidgetItem, 
     QPlainTextEdit, QSpinBox, QDoubleSpinBox, QGridLayout, QDialog,
     QProgressBar, QScrollArea, QSizePolicy
 )
@@ -21,8 +21,6 @@ class CalibrationDialog(QDialog):
         self.setWindowTitle(f"Калибровка БПЛА {drone_id}")
         self.resize(550, 480)
         self.setModal(True)
-        
-        # Transparent background for dialog
         self.setStyleSheet("background-color: #0f172a; border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.3);")
 
         layout = QVBoxLayout(self)
@@ -42,23 +40,24 @@ class DroneListItemWidget(QWidget):
 
     def init_ui(self) -> None:
         layout = QVBoxLayout(self)
-        layout.setContentsMargins(8, 8, 8, 8)
-        layout.setSpacing(6)
+        layout.setContentsMargins(4, 4, 4, 4)
+        layout.setSpacing(4)
 
         # Card container
         self.card = QFrame()
         self.card.setObjectName("card")
         self.card.setProperty("class", "drone_card")
+        self.card.setStyleSheet("background-color: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px;")
         card_layout = QVBoxLayout(self.card)
-        card_layout.setContentsMargins(10, 10, 10, 10)
-        card_layout.setSpacing(6)
+        card_layout.setContentsMargins(8, 8, 8, 8)
+        card_layout.setSpacing(4)
 
         # Top row: ID and mode
         top_row = QHBoxLayout()
         self.lbl_id = QLabel(f"🛸 БПЛА {self.drone_id}")
-        self.lbl_id.setStyleSheet("font-weight: bold; font-size: 13px; color: #38bdf8;")
+        self.lbl_id.setStyleSheet("font-weight: bold; font-size: 12px; color: #38bdf8;")
         self.lbl_mode = QLabel("STANDBY")
-        self.lbl_mode.setStyleSheet("font-size: 11px; color: #94a3b8; font-weight: 700; padding: 2px 6px; background-color: rgba(255,255,255,0.04); border-radius: 4px;")
+        self.lbl_mode.setStyleSheet("font-size: 10px; color: #94a3b8; font-weight: 700; padding: 1px 4px; background-color: rgba(255,255,255,0.04); border-radius: 3px;")
         
         top_row.addWidget(self.lbl_id)
         top_row.addStretch()
@@ -67,12 +66,12 @@ class DroneListItemWidget(QWidget):
 
         # Telemetry metrics
         grid = QGridLayout()
-        grid.setSpacing(4)
+        grid.setSpacing(2)
         
         self.lbl_alt = QLabel("Alt: 0.0 м")
-        self.lbl_alt.setStyleSheet("font-size: 11px; color: #cbd5e1;")
+        self.lbl_alt.setStyleSheet("font-size: 10px; color: #cbd5e1;")
         self.lbl_speed = QLabel("Spd: 0.0 м/с")
-        self.lbl_speed.setStyleSheet("font-size: 11px; color: #cbd5e1;")
+        self.lbl_speed.setStyleSheet("font-size: 10px; color: #cbd5e1;")
         
         grid.addWidget(self.lbl_alt, 0, 0)
         grid.addWidget(self.lbl_speed, 0, 1)
@@ -84,10 +83,10 @@ class DroneListItemWidget(QWidget):
         self.bat_bar.setRange(0, 100)
         self.bat_bar.setValue(100)
         self.bat_bar.setTextVisible(True)
-        self.bat_bar.setStyleSheet("QProgressBar { background-color: #1e293b; border-radius: 4px; height: 12px; text-align: center; color: white; font-size: 8px; font-weight: bold; } QProgressBar::chunk { background-color: #10b981; }")
+        self.bat_bar.setStyleSheet("QProgressBar { background-color: #1e293b; border-radius: 3px; height: 10px; text-align: center; color: white; font-size: 7px; font-weight: bold; } QProgressBar::chunk { background-color: #10b981; }")
         
         self.btn_calib = QPushButton("Калибровать 🔧")
-        self.btn_calib.setStyleSheet("font-size: 9px; padding: 3px 6px; background-color: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 4px;")
+        self.btn_calib.setStyleSheet("font-size: 9px; padding: 2px 4px; background-color: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 3px;")
         self.btn_calib.clicked.connect(lambda: self.calibrate_clicked.emit(self.drone_id))
 
         bat_row.addWidget(self.bat_bar)
@@ -102,17 +101,15 @@ class DroneListItemWidget(QWidget):
         self.lbl_speed.setText(f"Spd: {speed:.1f} м/с")
         self.bat_bar.setValue(battery)
         
-        # Color coding battery
         if battery < 30:
-            self.bat_bar.setStyleSheet("QProgressBar { background-color: #1e293b; border-radius: 4px; height: 12px; text-align: center; color: white; font-size: 8px; font-weight: bold; } QProgressBar::chunk { background-color: #ef4444; }")
+            self.bat_bar.setStyleSheet("QProgressBar { background-color: #1e293b; border-radius: 3px; height: 10px; text-align: center; color: white; font-size: 7px; font-weight: bold; } QProgressBar::chunk { background-color: #ef4444; }")
         else:
-            self.bat_bar.setStyleSheet("QProgressBar { background-color: #1e293b; border-radius: 4px; height: 12px; text-align: center; color: white; font-size: 8px; font-weight: bold; } QProgressBar::chunk { background-color: #10b981; }")
+            self.bat_bar.setStyleSheet("QProgressBar { background-color: #1e293b; border-radius: 3px; height: 10px; text-align: center; color: white; font-size: 7px; font-weight: bold; } QProgressBar::chunk { background-color: #10b981; }")
 
-        # Visual highlights
         if selected:
-            self.card.setStyleSheet("background-color: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.4);")
+            self.card.setStyleSheet("background-color: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.5); border-radius: 8px;")
         else:
-            self.card.setStyleSheet("background-color: rgba(30, 41, 59, 0.5); border-color: rgba(255, 255, 255, 0.06);")
+            self.card.setStyleSheet("background-color: rgba(30, 41, 59, 0.5); border-color: rgba(255, 255, 255, 0.06); border-radius: 8px;")
 
 
 class MainWindow(QMainWindow):
@@ -139,7 +136,7 @@ class MainWindow(QMainWindow):
         self.telemetry_timer.start(200)
 
         self.log_event("Премиальная НСУ AetherFlow запущена.")
-        self.log_event("Карта мира загружена на задний план. Готов к старту.")
+        self.log_event("Интерфейс инициализирован в режиме параллельных панелей.")
 
     def load_stylesheet(self) -> None:
         qss_path = Path(__file__).resolve().parent / "assets" / "styles.qss"
@@ -150,67 +147,50 @@ class MainWindow(QMainWindow):
             print(f"[UI] Warning: Stylesheet not found at {qss_path}")
 
     def init_ui(self) -> None:
-        # Central widget has Stacked Layout to layer widgets on top of the Map
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         
-        self.layout_stack = QStackedLayout(central_widget)
-        self.layout_stack.setStackingMode(QStackedLayout.StackingMode.StackAll)
+        main_layout = QVBoxLayout(central_widget)
+        main_layout.setContentsMargins(10, 10, 10, 10)
+        main_layout.setSpacing(10)
 
-        # Layer 0: Map View (Fullscreen Background)
+        # 1. Top Bar QFrame
+        top_bar = self.create_top_bar()
+        main_layout.addWidget(top_bar)
+
+        # 2. Middle Row (Left Sidebar | Full Map | Right Sidebar)
+        middle_layout = QHBoxLayout()
+        middle_layout.setSpacing(10)
+
+        # Left Panel (Fixed width)
+        left_panel = self.create_left_panel()
+        middle_layout.addWidget(left_panel)
+
+        # Map View (Expanding center)
         self.map_view = MapView()
         self.map_view.map_clicked.connect(self.on_map_clicked)
         self.map_view.vehicle_clicked.connect(self.on_vehicle_marker_clicked)
-        self.layout_stack.addWidget(self.map_view)
+        self.map_view.setStyleSheet("border-radius: 12px; border: 1px solid #334155;")
+        middle_layout.addWidget(self.map_view, stretch=3)
 
-        # Layer 1: Floating Overlay GUI Layout
-        overlay_gui = QWidget()
-        overlay_gui.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
-        
-        # Main grid for positioning overlays
-        grid = QGridLayout(overlay_gui)
-        grid.setContentsMargins(15, 15, 15, 15)
-        grid.setSpacing(15)
-
-        # Top Overlay: Command Bar
-        top_bar = self.create_top_bar()
-        grid.addWidget(top_bar, 0, 0, 1, 3)
-
-        # Left Overlay: Connection and Swarm list
-        left_panel = self.create_left_panel()
-        grid.addWidget(left_panel, 1, 0, 1, 1)
-
-        # Middle Area: Spacer (map interaction)
-        map_spacer = QWidget()
-        map_spacer.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
-        grid.addWidget(map_spacer, 1, 1, 1, 1)
-
-        # Right Overlay: Primary HUD & Video Grid
+        # Right Panel (Fixed width)
         right_panel = self.create_right_panel()
-        grid.addWidget(right_panel, 1, 2, 1, 1)
+        middle_layout.addWidget(right_panel)
 
-        # Bottom Overlay: Terminal Event log
+        main_layout.addLayout(middle_layout, stretch=1)
+
+        # 3. Bottom Panel (Terminal Event Logs)
         bottom_panel = self.create_bottom_panel()
-        grid.addWidget(bottom_panel, 2, 0, 1, 3)
-
-        # Column / Row streches
-        grid.setColumnStretch(0, 1)
-        grid.setColumnStretch(1, 3)
-        grid.setColumnStretch(2, 1)
-        grid.setRowStretch(0, 0)
-        grid.setRowStretch(1, 1)
-        grid.setRowStretch(2, 0)
-
-        self.layout_stack.addWidget(overlay_gui)
+        main_layout.addWidget(bottom_panel)
 
     def create_top_bar(self) -> QWidget:
         bar = QFrame()
         bar.setObjectName("top_bar")
         bar.setProperty("class", "overlay_panel")
-        bar.setStyleSheet("background-color: rgba(15, 23, 42, 0.72); border: 1px solid rgba(56, 189, 248, 0.15);")
+        bar.setStyleSheet("background-color: #1e293b; border: 1px solid #334155; border-radius: 8px;")
         
         layout = QHBoxLayout(bar)
-        layout.setContentsMargins(12, 8, 12, 8)
+        layout.setContentsMargins(15, 8, 15, 8)
         layout.setSpacing(15)
 
         # Logo text
@@ -268,7 +248,8 @@ class MainWindow(QMainWindow):
     def create_left_panel(self) -> QWidget:
         panel = QFrame()
         panel.setProperty("class", "overlay_panel")
-        panel.setFixedWidth(330)
+        panel.setStyleSheet("background-color: #111827; border: 1px solid #1e293b; border-radius: 8px;")
+        panel.setFixedWidth(280)
 
         layout = QVBoxLayout(panel)
         layout.setContentsMargins(0, 0, 0, 0)
@@ -276,19 +257,19 @@ class MainWindow(QMainWindow):
 
         # Header Title
         title_bar = QFrame()
-        title_bar.setProperty("class", "overlay_title_bar")
+        title_bar.setStyleSheet("border-bottom: 1px solid #1e293b; padding: 10px; background-color: rgba(30,41,59,0.2);")
         title_layout = QHBoxLayout(title_bar)
-        title_layout.setContentsMargins(15, 10, 15, 10)
+        title_layout.setContentsMargins(10, 5, 10, 5)
         lbl_title = QLabel("Флот БПЛА & Сеть")
-        lbl_title.setProperty("class", "overlay_title")
+        lbl_title.setStyleSheet("font-size: 13px; font-weight: bold; color: #f8fafc;")
         title_layout.addWidget(lbl_title)
         layout.addWidget(title_bar)
 
         # Connection setup group
         conn_box = QFrame()
         conn_layout = QGridLayout(conn_box)
-        conn_layout.setContentsMargins(15, 5, 15, 5)
-        conn_layout.setSpacing(10)
+        conn_layout.setContentsMargins(12, 5, 12, 5)
+        conn_layout.setSpacing(8)
 
         conn_layout.addWidget(QLabel("Кол-во дронов:"), 0, 0)
         self.spn_count = QSpinBox()
@@ -311,7 +292,7 @@ class MainWindow(QMainWindow):
         self.scroll_content = QWidget()
         self.scroll_content.setStyleSheet("background: transparent;")
         self.scroll_layout = QVBoxLayout(self.scroll_content)
-        self.scroll_layout.setContentsMargins(10, 0, 10, 0)
+        self.scroll_layout.setContentsMargins(8, 0, 8, 0)
         self.scroll_layout.setSpacing(2)
         self.scroll_layout.addStretch()
         
@@ -323,7 +304,8 @@ class MainWindow(QMainWindow):
     def create_right_panel(self) -> QWidget:
         panel = QFrame()
         panel.setProperty("class", "overlay_panel")
-        panel.setFixedWidth(340)
+        panel.setStyleSheet("background-color: #111827; border: 1px solid #1e293b; border-radius: 8px;")
+        panel.setFixedWidth(290)
 
         layout = QVBoxLayout(panel)
         layout.setContentsMargins(0, 0, 0, 0)
@@ -331,23 +313,23 @@ class MainWindow(QMainWindow):
 
         # Header Title
         title_bar = QFrame()
-        title_bar.setProperty("class", "overlay_title_bar")
+        title_bar.setStyleSheet("border-bottom: 1px solid #1e293b; padding: 10px; background-color: rgba(30,41,59,0.2);")
         title_layout = QHBoxLayout(title_bar)
-        title_layout.setContentsMargins(15, 10, 15, 10)
+        title_layout.setContentsMargins(10, 5, 10, 5)
         lbl_title = QLabel("Инфо-Панель HUD")
-        lbl_title.setProperty("class", "overlay_title")
+        lbl_title.setStyleSheet("font-size: 13px; font-weight: bold; color: #f8fafc;")
         title_layout.addWidget(lbl_title)
         layout.addWidget(title_bar)
 
         # Selected drone detailed telemetry
         self.telemetry_card = QFrame()
-        self.telemetry_card.setStyleSheet("padding: 10px; background-color: rgba(30,41,59,0.3); border-radius: 8px; margin: 0 15px;")
+        self.telemetry_card.setStyleSheet("padding: 8px; background-color: rgba(30,41,59,0.3); border-radius: 6px; margin: 0 10px;")
         card_layout = QVBoxLayout(self.telemetry_card)
-        card_layout.setContentsMargins(10, 10, 10, 10)
-        card_layout.setSpacing(8)
+        card_layout.setContentsMargins(8, 8, 8, 8)
+        card_layout.setSpacing(6)
 
         self.lbl_sel_name = QLabel("БПЛА НЕ ВЫБРАН")
-        self.lbl_sel_name.setStyleSheet("font-size: 14px; font-weight: bold; color: #38bdf8;")
+        self.lbl_sel_name.setStyleSheet("font-size: 13px; font-weight: bold; color: #38bdf8;")
         card_layout.addWidget(self.lbl_sel_name)
 
         self.lbl_sel_telemetry = QLabel(
@@ -358,33 +340,33 @@ class MainWindow(QMainWindow):
             "Компас: 0.0°\n"
             "Крен/Тангаж: 0.0° / 0.0°"
         )
-        self.lbl_sel_telemetry.setStyleSheet("font-family: 'Consolas', monospace; font-size: 12px; color: #cbd5e1; line-height: 1.5;")
+        self.lbl_sel_telemetry.setStyleSheet("font-family: 'Consolas', monospace; font-size: 11px; color: #cbd5e1; line-height: 1.4;")
         card_layout.addWidget(self.lbl_sel_telemetry)
 
         layout.addWidget(self.telemetry_card)
 
         # Video streams simulated section
         video_title = QLabel("📡 Видеокамеры роя")
-        video_title.setStyleSheet("font-weight: bold; color: #94a3b8; font-size: 12px; margin-left: 15px;")
+        video_title.setStyleSheet("font-weight: bold; color: #94a3b8; font-size: 11px; margin-left: 12px;")
         layout.addWidget(video_title)
 
         # Mock Video feeds layout
         self.video_grid = QFrame()
-        self.video_grid.setStyleSheet("margin: 0 15px;")
+        self.video_grid.setStyleSheet("margin: 0 10px;")
         grid_layout = QGridLayout(self.video_grid)
         grid_layout.setContentsMargins(0, 0, 0, 0)
-        grid_layout.setSpacing(10)
+        grid_layout.setSpacing(8)
 
         # 4 mock video cards
         self.video_cards = []
         for i in range(4):
             card = QFrame()
-            card.setStyleSheet("background-color: #020617; border: 1px solid #334155; border-radius: 6px; min-height: 80px;")
+            card.setStyleSheet("background-color: #020617; border: 1px solid #334155; border-radius: 4px; min-height: 70px;")
             c_lay = QVBoxLayout(card)
-            c_lay.setContentsMargins(5, 5, 5, 5)
+            c_lay.setContentsMargins(4, 4, 4, 4)
             
             lbl_cam = QLabel(f"CAM {i+1} - NO FEED")
-            lbl_cam.setStyleSheet("color: #475569; font-size: 10px; font-weight: bold;")
+            lbl_cam.setStyleSheet("color: #475569; font-size: 9px; font-weight: bold;")
             lbl_cam.setAlignment(Qt.AlignmentFlag.AlignCenter)
             c_lay.addWidget(lbl_cam)
             
@@ -399,6 +381,7 @@ class MainWindow(QMainWindow):
     def create_bottom_panel(self) -> QWidget:
         panel = QFrame()
         panel.setProperty("class", "overlay_panel")
+        panel.setStyleSheet("background-color: #111827; border: 1px solid #1e293b; border-radius: 8px;")
         panel.setFixedHeight(120)
 
         layout = QVBoxLayout(panel)
@@ -407,16 +390,15 @@ class MainWindow(QMainWindow):
 
         # Header Title
         title_bar = QFrame()
-        title_bar.setProperty("class", "overlay_title_bar")
+        title_bar.setStyleSheet("border-bottom: 1px solid #1e293b; padding: 6px 12px; background-color: rgba(30,41,59,0.2);")
         title_layout = QHBoxLayout(title_bar)
-        title_layout.setContentsMargins(15, 6, 15, 6)
+        title_layout.setContentsMargins(10, 2, 10, 2)
         lbl_title = QLabel("Терминал Событий роя БПЛА")
-        lbl_title.setProperty("class", "overlay_title")
-        lbl_title.setStyleSheet("font-size: 11px;")
+        lbl_title.setStyleSheet("font-size: 11px; font-weight: bold; color: #f8fafc;")
         title_layout.addWidget(lbl_title)
         
         btn_clr = QPushButton("Очистить")
-        btn_clr.setStyleSheet("font-size: 9px; padding: 2px 6px; background-color: rgba(255,255,255,0.05); color: #94a3b8;")
+        btn_clr.setStyleSheet("font-size: 9px; padding: 1px 4px; background-color: rgba(255,255,255,0.05); color: #94a3b8; border-radius: 3px;")
         btn_clr.clicked.connect(lambda: self.txt_logs.clear())
         title_layout.addStretch()
         title_layout.addWidget(btn_clr)
@@ -426,7 +408,7 @@ class MainWindow(QMainWindow):
         # Terminal Console logs
         self.txt_logs = QPlainTextEdit()
         self.txt_logs.setReadOnly(True)
-        self.txt_logs.setProperty("class", "console_log")
+        self.txt_logs.setStyleSheet("QPlainTextEdit { background-color: #020617; border: none; color: #38bdf8; font-family: 'Consolas', monospace; font-size: 11px; }")
         layout.addWidget(self.txt_logs)
 
         return panel
@@ -553,7 +535,6 @@ class MainWindow(QMainWindow):
     def mousePressEvent(self, event) -> None:
         child = self.childAt(event.position().toPoint())
         if child:
-            # Trace if a drone list widget was clicked
             parent_widget = child.parent()
             while parent_widget:
                 if isinstance(parent_widget, DroneListItemWidget):
