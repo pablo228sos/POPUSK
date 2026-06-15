@@ -1,126 +1,149 @@
 const state = {
   map: null,
   bridge: null,
-  vehicleMarker: null,
-  vehicleLatLng: null,
-  vehicleTrack: [],
-  vehicleTrackLine: null,
+  vehicles: {}, // Maps vehicle_id -> { marker, trackLine, trackPoints, selected }
   zonesLayer: null,
-  draftLayer: null,
-  routeLine: null,
-  otherMarkers: [],
+  selectedVehicleId: null,
+  editorMode: "none",
   waypointMarkers: [],
-  editor: {
-    mode: "none",
-    label: "",
-  },
+  routeLine: null
 };
-
-function zoneColor(type) {
-  if (type === "no_fly") return "#ef4444";
-  if (type === "defense") return "#f59e0b";
-  if (type === "competition") return "#e2f1ff";
-  return "#38bdf8";
-}
 
 window.bootstrapMap = function bootstrapMap(config) {
   if (state.map) return;
   state.map = L.map("map", {
     zoomControl: false,
-    preferCanvas: true,
+    preferCanvas: true
   }).setView([config.center.lat, config.center.lon], config.zoom);
 
   L.tileLayer(config.tileUrl, {
     attribution: config.attribution,
-    subdomains: ["a", "b", "c"],
-    maxZoom: 20,
+    maxZoom: 20
   }).addTo(state.map);
 
   state.zonesLayer = L.layerGroup().addTo(state.map);
-  state.draftLayer = L.layerGroup().addTo(state.map);
-  state.vehicleTrackLine = L.polyline([], {
-    color: "#59ff65",
-    weight: 4,
-    opacity: 0.82,
-  }).addTo(state.map);
 
+  // Bind map click handler
   state.map.on("click", (event) => {
-    if (!state.bridge || state.editor.mode === "none") return;
-    state.bridge.reportMapClick(event.latlng.lat, event.latlng.lng);
+    if (state.bridge) {
+      state.bridge.reportMapClick(event.latlng.lat, event.latlng.lng);
+    }
   });
 
+  // Init WebChannel
   if (window.qt && window.QWebChannel) {
     new QWebChannel(qt.webChannelTransport, (channel) => {
       state.bridge = channel.objects.bridge;
+      console.log("QWebChannel connected successfully!");
     });
   }
 };
 
-window.gcsUpdateVehicle = function gcsUpdateVehicle(payload) {
-  if (!state.map) return;
-  const latLng = [payload.lat, payload.lon];
-  state.vehicleLatLng = latLng;
-  const icon = L.divIcon({
-    className: "vehicle-icon-wrapper",
-    html: `<div class="vehicle-icon-shell"><div class="vehicle-icon" style="transform: rotate(${payload.heading}deg)">&#9992;</div></div>`,
-    iconSize: [44, 44],
-    iconAnchor: [22, 22],
-  });
-  if (!state.vehicleMarker) {
-    state.vehicleMarker = L.marker(latLng, { icon }).addTo(state.map);
-  } else {
-    state.vehicleMarker.setLatLng(latLng);
-    state.vehicleMarker.setIcon(icon);
-  }
-  state.vehicleMarker.bindPopup(
-    `<div class="telemetry-popup"><b>UAV</b><br/>Mode: ${payload.mode}<br/>Heading: ${payload.heading.toFixed(1)}</div>`,
-  );
-  state.vehicleTrack.push(latLng);
-  if (state.vehicleTrack.length > 300) state.vehicleTrack.shift();
-  state.vehicleTrackLine.setLatLngs(state.vehicleTrack);
-};
-
-window.gcsUpdateOtherDrones = function gcsUpdateOtherDrones(drones) {
-  if (!state.map) return;
-  state.otherMarkers.forEach((marker) => marker.remove());
-  state.otherMarkers = drones.map((drone) => {
-    const marker = L.marker([drone.lat, drone.lon], {
-      icon: L.divIcon({
-        className: "other-drone-wrapper",
-        html: `<div class="other-drone-badge">${drone.team_id}</div>`,
-        iconSize: [28, 28],
-        iconAnchor: [14, 14],
-      }),
-    }).addTo(state.map);
-    marker.bindPopup(`<b>Team ${drone.team_id}</b><br/>Latency: ${drone.latency_ms} ms`);
-    return marker;
-  });
-};
-
-window.gcsUpdateZones = function gcsUpdateZones(zones) {
-  if (!state.map || !state.zonesLayer) return;
-  state.zonesLayer.clearLayers();
-  zones.forEach((zone) => {
-    const color = zoneColor(zone.type);
-    if (zone.center && zone.radius_m) {
-      L.circle([zone.center.lat, zone.center.lon], {
-        radius: zone.radius_m,
-        color,
-        weight: 2,
-        fillColor: color,
-        fillOpacity: zone.type === "mission" ? 0.15 : zone.type === "competition" ? 0.03 : 0.24,
-        dashArray: zone.type === "competition" ? "10 8" : null,
-      }).bindTooltip(zone.label || zone.id).addTo(state.zonesLayer);
-      return;
+window.gcsSelectVehicle = function gcsSelectVehicle(vehicleId) {
+  state.selectedVehicleId = vehicleId;
+  // Redraw all markers to show selected state
+  Object.keys(state.vehicles).forEach((id) => {
+    const v = state.vehicles[id];
+    const isSelected = parseInt(id) === vehicleId;
+    v.selected = isSelected;
+    
+    // Update marker styling
+    if (v.marker) {
+      const shell = v.marker.getElement()?.querySelector(".vehicle-icon-shell");
+      if (shell) {
+        if (isSelected) {
+          shell.classList.add("selected");
+        } else {
+          shell.classList.remove("selected");
+        }
+      }
     }
-    const points = zone.points.map((point) => [point.lat, point.lon]);
-    L.polygon(points, {
-      color,
-      weight: zone.type === "competition" ? 3 : 2,
-      fillColor: color,
-      fillOpacity: zone.type === "competition" ? 0.03 : 0.22,
-      dashArray: zone.type === "competition" ? "10 8" : null,
-    }).bindTooltip(zone.label || zone.id).addTo(state.zonesLayer);
+  });
+};
+
+window.gcsUpdateVehicles = function gcsUpdateVehicles(fleet) {
+  if (!state.map) return;
+  
+  const currentIds = new Set(fleet.map(v => v.id.toString()));
+
+  // Remove stale vehicles
+  Object.keys(state.vehicles).forEach((id) => {
+    if (!currentIds.has(id)) {
+      state.vehicles[id].marker.remove();
+      state.vehicles[id].trackLine.remove();
+      delete state.vehicles[id];
+    }
+  });
+
+  // Update or add active vehicles
+  fleet.forEach((payload) => {
+    const idStr = payload.id.toString();
+    const latLng = [payload.lat, payload.lon];
+    const isArmed = payload.armed;
+    const heading = payload.heading;
+    const isSelected = payload.id === state.selectedVehicleId;
+
+    if (!state.vehicles[idStr]) {
+      // Create new vehicle object
+      const trackPoints = [latLng];
+      const trackLine = L.polyline(trackPoints, {
+        color: getRandomColor(payload.id),
+        weight: 3,
+        opacity: 0.6,
+        dashArray: "4 4"
+      }).addTo(state.map);
+
+      state.vehicles[idStr] = {
+        marker: null,
+        trackLine: trackLine,
+        trackPoints: trackPoints,
+        selected: isSelected
+      };
+    }
+
+    const v = state.vehicles[idStr];
+    v.trackPoints.push(latLng);
+    if (v.trackPoints.length > 500) {
+      v.trackPoints.shift();
+    }
+    v.trackLine.setLatLngs(v.trackPoints);
+
+    const armedClass = isArmed ? "armed" : "";
+    const selectedClass = isSelected ? "selected" : "";
+    
+    const icon = L.divIcon({
+      className: "vehicle-icon-wrapper",
+      html: `
+        <div class="vehicle-icon-shell ${armedClass} ${selectedClass}">
+          <div class="vehicle-icon" style="transform: rotate(${heading}deg)">&#9992;</div>
+          <div class="vehicle-badge-id">${payload.id}</div>
+        </div>
+      `,
+      iconSize: [44, 44],
+      iconAnchor: [22, 22]
+    });
+
+    if (!v.marker) {
+      v.marker = L.marker(latLng, { icon }).addTo(state.map);
+      v.marker.on("click", () => {
+        if (state.bridge) {
+          state.bridge.reportVehicleClicked(payload.id);
+        }
+      });
+    } else {
+      v.marker.setLatLng(latLng);
+      v.marker.setIcon(icon);
+    }
+
+    v.marker.bindPopup(`
+      <div class="telemetry-popup">
+        <b>БПЛА ${payload.id}</b><br/>
+        Режим: <span style="color: #38bdf8; font-weight: bold;">${payload.mode}</span><br/>
+        Высота: ${payload.alt.toFixed(1)} м<br/>
+        Заряд: ${payload.battery}% (${payload.battery_v.toFixed(1)} В)<br/>
+        Связь: ${payload.rssi}%
+      </div>
+    `);
   });
 };
 
@@ -130,84 +153,47 @@ window.gcsUpdateRoute = function gcsUpdateRoute(route) {
   state.waypointMarkers.forEach((marker) => marker.remove());
   state.waypointMarkers = [];
 
-  if (!route.length) {
+  if (!route || !route.length) {
     state.routeLine = null;
     return;
   }
 
-  state.routeLine = L.polyline(route.map((point) => [point.lat, point.lon]), {
-    color: "#d9f542",
-    weight: 2.5,
-    opacity: 0.92,
+  state.routeLine = L.polyline(route.map((p) => [p.lat, p.lon]), {
+    color: "#f59e0b",
+    weight: 3,
+    opacity: 0.9
   }).addTo(state.map);
 
   route.forEach((point, index) => {
-    const label = index === 0 ? "1" : `${index + 1}`;
     const marker = L.marker([point.lat, point.lon], {
       icon: L.divIcon({
         className: "waypoint-wrapper",
-        html: `<div class="waypoint-badge wp-badge">${label}</div>`,
-        iconSize: [34, 34],
-        iconAnchor: [17, 17],
-      }),
+        html: `<div class="waypoint-badge">${index + 1}</div>`,
+        iconSize: [24, 24],
+        iconAnchor: [12, 12]
+      })
     }).addTo(state.map);
     state.waypointMarkers.push(marker);
   });
 };
 
 window.gcsZoomIn = function gcsZoomIn() {
-  if (!state.map) return;
-  state.map.zoomIn();
+  if (state.map) state.map.zoomIn();
 };
 
 window.gcsZoomOut = function gcsZoomOut() {
-  if (!state.map) return;
-  state.map.zoomOut();
+  if (state.map) state.map.zoomOut();
 };
 
 window.gcsCenterOnVehicle = function gcsCenterOnVehicle() {
-  if (!state.map || !state.vehicleLatLng) return;
-  state.map.panTo(state.vehicleLatLng, { animate: true, duration: 0.4 });
-};
-
-window.gcsSetEditorState = function gcsSetEditorState(payload) {
-  state.editor = payload;
-  const container = document.getElementById("map");
-  if (!container) return;
-  container.dataset.editorMode = payload.mode || "none";
-};
-
-window.gcsUpdateDraft = function gcsUpdateDraft(payload) {
-  if (!state.map || !state.draftLayer) return;
-  state.draftLayer.clearLayers();
-  const points = payload.points || [];
-  if (!points.length) return;
-
-  const latLngs = points.map((point) => [point.lat, point.lon]);
-  if (payload.radius_m && points.length === 1) {
-    L.circle(latLngs[0], {
-      radius: payload.radius_m,
-      color: zoneColor(payload.zone_type || "defense"),
-      weight: 2,
-      dashArray: "8 6",
-      fillOpacity: 0.14,
-    }).addTo(state.draftLayer);
-    return;
+  if (!state.map || !state.selectedVehicleId) return;
+  const v = state.vehicles[state.selectedVehicleId.toString()];
+  if (v && v.marker) {
+    state.map.panTo(v.marker.getLatLng(), { animate: true });
   }
-
-  L.polyline(latLngs, {
-    color: "#f8fafc",
-    weight: 2,
-    dashArray: "6 6",
-    opacity: 0.85,
-  }).addTo(state.draftLayer);
-
-  latLngs.forEach((latLng) => {
-    L.circleMarker(latLng, {
-      radius: 4,
-      color: "#ffffff",
-      weight: 1,
-      fillOpacity: 1,
-    }).addTo(state.draftLayer);
-  });
 };
+
+function getRandomColor(id) {
+  const colors = ["#38bdf8", "#34d399", "#fb7185", "#f472b6", "#fbbf24", "#a78bfa", "#2dd4bf"];
+  return colors[id % colors.length];
+}

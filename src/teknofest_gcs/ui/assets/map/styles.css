@@ -1,94 +1,144 @@
-html,
-body,
-#map {
+html, body, #map {
   margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  background: #08111f;
+  background-color: #0f172a; /* Slate 900 background */
 }
 
+/* Custom styles for Leaflet UI elements to match Dark Mode */
 .leaflet-container {
-  background: #08111f;
-  font-family: "Segoe UI", sans-serif;
+  background-color: #0f172a !important;
 }
 
-.leaflet-control-attribution,
-.leaflet-control-zoom {
-  display: none;
+.leaflet-bar {
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
 }
 
-.leaflet-pane.leaflet-tile-pane {
-  filter: contrast(1.06) saturate(0.96) brightness(0.9);
+.leaflet-bar a {
+  background-color: rgba(30, 41, 59, 0.85) !important;
+  color: #f1f5f9 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
 }
 
-.leaflet-container::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 50% 48%, transparent 45%, rgba(4, 9, 14, 0.18) 100%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.16), transparent 16%, transparent 72%, rgba(0, 0, 0, 0.2));
-  z-index: 400;
+.leaflet-bar a:hover {
+  background-color: rgba(51, 65, 85, 0.9) !important;
+  color: #38bdf8 !important;
 }
 
-.telemetry-popup {
-  color: #dbeafe;
+/* Popup and tooltip dark design */
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: rgba(15, 23, 42, 0.92) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #f1f5f9 !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6) !important;
+  border-radius: 12px !important;
 }
 
-.vehicle-icon-wrapper,
-.waypoint-wrapper,
-.other-drone-wrapper {
-  background: transparent;
-  border: none;
+.leaflet-popup-content {
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 12px 16px !important;
+}
+
+.leaflet-tooltip {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
+  color: #38bdf8 !important;
+  border-radius: 6px !important;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+}
+
+/* Custom Vehicle Icon classes */
+.vehicle-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .vehicle-icon-shell {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(30, 41, 59, 0.8);
+  border: 2px solid #38bdf8; /* Blue border */
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.6), inset 0 0 8px rgba(56, 189, 248, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 999px;
-  background: rgba(14, 22, 17, 0.5);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.vehicle-icon-shell.armed {
+  border-color: #ef4444; /* Red border if armed */
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
+}
+
+.vehicle-icon-shell.selected {
+  border-color: #10b981; /* Emerald border if selected in GCS */
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.8);
+  transform: scale(1.15);
 }
 
 .vehicle-icon {
-  font-size: 28px;
-  line-height: 1;
-  color: #49df65;
-  text-shadow: 0 0 18px rgba(73, 223, 101, 0.55);
-}
-
-.waypoint-badge,
-.other-drone-badge {
-  width: 32px;
-  height: 32px;
-  border-radius: 999px;
+  font-size: 20px;
+  color: #f8fafc;
   display: flex;
   align-items: center;
   justify-content: center;
+  transform-origin: center;
+  transition: transform 0.1s linear;
+}
+
+.vehicle-badge-id {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-size: 10px;
+  font-weight: 800;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #0f172a;
+}
+
+.vehicle-icon-shell.armed .vehicle-badge-id {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+/* Waypoints and Path styling */
+.waypoint-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waypoint-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #f59e0b; /* Amber */
+  color: #0f172a;
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
   font-weight: 700;
-  font-size: 15px;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
-}
-
-.wp-badge {
-  background: #ffffff;
-  color: #08111f;
-  border: 3px solid #57df5f;
-}
-
-.home-badge {
-  background: #e9fff0;
-  color: #0c1f13;
-  border: 3px solid #2fbe58;
-}
-
-.other-drone-badge {
-  background: #0b1c2c;
-  color: #d7e6ff;
-  border: 2px solid #48b7ff;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
