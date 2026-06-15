@@ -22,10 +22,11 @@ class MapView(QWebEngineView):
     map_clicked = pyqtSignal(float, float)
     vehicle_clicked = pyqtSignal(int)
 
-    def __init__(self) -> None:
+    def __init__(self, map_settings: any = None) -> None:
         super().__init__()
         self._ready = False
         self._pending_scripts: list[str] = []
+        self.map_settings = map_settings
         
         self._bridge = MapBridge()
         self._bridge.map_clicked.connect(self.map_clicked.emit)
@@ -81,12 +82,44 @@ class MapView(QWebEngineView):
             return
         self._ready = True
         
-        # Bootstrap map with default configs (Istanbul/Teknofest test center)
+        # Determine parameters from settings or use defaults
+        tile_url = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution = "&copy; OpenStreetMap contributors"
+        center_lat = 41.143
+        center_lon = 29.081
+        zoom = 16
+        
+        if self.map_settings:
+            if hasattr(self.map_settings, "tile_url"):
+                tile_url = self.map_settings.tile_url
+            elif isinstance(self.map_settings, dict):
+                tile_url = self.map_settings.get("tile_url", tile_url)
+
+            if hasattr(self.map_settings, "attribution"):
+                attribution = self.map_settings.attribution
+            elif isinstance(self.map_settings, dict):
+                attribution = self.map_settings.get("attribution", attribution)
+
+            if hasattr(self.map_settings, "center_lat"):
+                center_lat = self.map_settings.center_lat
+            elif isinstance(self.map_settings, dict):
+                center_lat = self.map_settings.get("center_lat", center_lat)
+
+            if hasattr(self.map_settings, "center_lon"):
+                center_lon = self.map_settings.center_lon
+            elif isinstance(self.map_settings, dict):
+                center_lon = self.map_settings.get("center_lon", center_lon)
+
+            if hasattr(self.map_settings, "zoom"):
+                zoom = self.map_settings.zoom
+            elif isinstance(self.map_settings, dict):
+                zoom = self.map_settings.get("zoom", zoom)
+
         config = {
-            "tileUrl": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-            "attribution": "&copy; OpenStreetMap contributors",
-            "center": {"lat": 41.143, "lon": 29.081},
-            "zoom": 16
+            "tileUrl": tile_url,
+            "attribution": attribution,
+            "center": {"lat": center_lat, "lon": center_lon},
+            "zoom": zoom
         }
         self.page().runJavaScript(f"window.bootstrapMap({json.dumps(config)});")
         

@@ -115,6 +115,8 @@ class DroneListItemWidget(QWidget):
 class MainWindow(QMainWindow):
     def __init__(self, settings: any = None, settings_path: any = None) -> None:
         super().__init__()
+        self.settings = settings
+        self.settings_path = settings_path
         self.setWindowTitle("AetherFlow Ground Control Station - Swarm Dashboard")
         self.resize(1366, 768)
         
@@ -155,7 +157,8 @@ class MainWindow(QMainWindow):
         main_layout.setSpacing(10)
 
         # Map View (Expanding center) - instantiated first to prevent AttributeErrors in panels
-        self.map_view = MapView()
+        map_settings = self.settings.map if self.settings else None
+        self.map_view = MapView(map_settings)
         self.map_view.map_clicked.connect(self.on_map_clicked)
         self.map_view.vehicle_clicked.connect(self.on_vehicle_marker_clicked)
         self.map_view.setStyleSheet("border-radius: 12px; border: 1px solid #334155;")
