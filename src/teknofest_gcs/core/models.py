@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import time
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from enum import Enum
@@ -173,3 +174,75 @@ class CompetitionStatus:
     @property
     def manual_limit_exceeded(self) -> bool:
         return self.manual_mode_switches > self.manual_mode_limit
+
+
+from PyQt6.QtCore import QObject, pyqtSignal
+
+@dataclass
+class VehicleState:
+    id: int
+    lat: float = 0.0
+    lon: float = 0.0
+    alt: float = 0.0
+    relative_alt: float = 0.0
+    heading: float = 0.0
+    roll: float = 0.0
+    pitch: float = 0.0
+    yaw: float = 0.0
+    vx: float = 0.0
+    vy: float = 0.0
+    vz: float = 0.0
+    battery_v: float = 12.6
+    battery_percent: int = 100
+    rssi: int = 100
+    flight_mode: str = "DISCONNECTED"
+    armed: bool = False
+    waypoints: list[GeoPoint] = field(default_factory=list)
+    target_wp_index: int = -1
+    last_update: float = field(default_factory=time.time)
+    
+    @property
+    def is_online(self) -> bool:
+        import time
+        return time.time() - self.last_update < 5.0
+
+class FleetManager(QObject):
+    vehicle_added = pyqtSignal(int)
+    vehicle_updated = pyqtSignal(int)
+    vehicle_removed = pyqtSignal(int)
+
+    def __init__(self) -> None:
+        super().__init__()
+        self._vehicles: dict[int, VehicleState] = {}
+
+    def get_vehicle(self, vehicle_id: int) -> VehicleState | None:
+        return self._vehicles.get(vehicle_id)
+
+    def update_vehicle(self, vehicle_id: int, **kwargs) -> None:
+        import time
+        is_new = vehicle_id not in self._vehicles
+        if is_new:
+            self._vehicles[vehicle_id] = VehicleState(id=vehicle_id)
+        
+        vehicle = self._vehicles[vehicle_id]
+        vehicle.last_update = time.time()
+        for key, value in kwargs.items():
+            if hasattr(vehicle, key):
+                setattr(vehicle, key, value)
+        
+        if is_new:
+            self.vehicle_added.emit(vehicle_id)
+        else:
+            self.vehicle_updated.emit(vehicle_id)
+
+    def remove_vehicle(self, vehicle_id: int) -> None:
+        if vehicle_id in self._vehicles:
+            del self._vehicles[vehicle_id]
+            self.vehicle_removed.emit(vehicle_id)
+
+    def all_vehicles(self) -> list[VehicleState]:
+        return list(self._vehicles.values())
+
+    def online_vehicles(self) -> list[VehicleState]:
+        return [v for v in self._vehicles.values() if v.is_online]
+
