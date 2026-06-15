@@ -21,6 +21,7 @@ src/teknofest_gcs/config/default.yaml
 src/teknofest_gcs/config/settings.py
 src/teknofest_gcs/core/__init__.py
 src/teknofest_gcs/core/models.py
+src/teknofest_gcs/core/sim.py
 src/teknofest_gcs/geo/__init__.py
 src/teknofest_gcs/geo/planner.py
 src/teknofest_gcs/geo/zones.py
@@ -28,7 +29,9 @@ src/teknofest_gcs/logging/__init__.py
 src/teknofest_gcs/logging/service.py
 src/teknofest_gcs/mission/__init__.py
 src/teknofest_gcs/mission/fsm.py
+src/teknofest_gcs/mission/planning.py
 src/teknofest_gcs/ui/__init__.py
+src/teknofest_gcs/ui/calibration.py
 src/teknofest_gcs/ui/hud_widgets.py
 src/teknofest_gcs/ui/main_window.py
 src/teknofest_gcs/ui/map_view.py
@@ -41,4 +44,6 @@ src/teknofest_gcs/video/__init__.py
 src/teknofest_gcs/video/service.py
 tests/test_api_payload.py
 tests/test_fsm.py
+tests/test_swarm_model.py
+tests/test_swarm_sim.py
 tests/test_zones.py

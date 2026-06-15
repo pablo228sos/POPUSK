@@ -90,6 +90,10 @@ class AircraftSettings:
     cruise_speed_mps: float = 24.0
     qguided_mode_enabled: bool = True
     qrtl_mode: int = 1
+    mass_kg: float = 2.0
+    max_thrust_n: float = 68.7
+    drag_coefficient: float = 0.15
+    frontal_area_m2: float = 0.05
 
 
 @dataclass(slots=True)
